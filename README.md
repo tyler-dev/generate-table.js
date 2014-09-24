@@ -9,78 +9,109 @@ Guides
 
 **Table Loading from JSON File**
 
-Create a html table with the class 
-	"generate-table"
+Create a html table with the class
+
+```
+generate-table
+```
+
 And add this custom attribute. The value of this attribute is the location of the JSON file.
-	data-source="json/plans.json"
+
+```
+data-source="json/plans.json"
+```
+
 The json file formatted by the name of the column as the key name and the value being the text for the column. Here is some example data for the json,
-	[
-	   {
-	      "carrierName":"ProHealth",
-	      "planName":"Be Well Basic",
-	      "copay":40,
-	      "premium":100,
-	      "annualLimit":50000
-	   },
-	   {
-	      "carrierName":"ProHealth",
-	      "planName":"Be Well Extra",
-	      "copay":30,
-	      "premium":140,
-	      "annualLimit":100000
-	   },
-	   {
-	      "carrierName":"ProHealth",
-	      "planName":"Be Well Max",
-	      "copay":20,
-	      "premium":180,
-	      "annualLimit":200000
-	   },
-	   {
-	      "carrierName":"Assured",
-	      "planName":"Assurance One",
-	      "copay":35,
-	      "premium":135,
-	      "annualLimit":120000
-	   },
-	   {
-	      "carrierName":"Assured",
-	      "planName":"Assurance Two",
-	      "copay":25,
-	      "premium":200,
-	      "annualLimit":250000
-	   }
-	]
+
+```json
+[
+   {
+      "carrierName":"ProHealth",
+      "planName":"Be Well Basic",
+      "copay":40,
+      "premium":100,
+      "annualLimit":50000
+   },
+   {
+      "carrierName":"ProHealth",
+      "planName":"Be Well Extra",
+      "copay":30,
+      "premium":140,
+      "annualLimit":100000
+   },
+   {
+      "carrierName":"ProHealth",
+      "planName":"Be Well Max",
+      "copay":20,
+      "premium":180,
+      "annualLimit":200000
+   },
+   {
+      "carrierName":"Assured",
+      "planName":"Assurance One",
+      "copay":35,
+      "premium":135,
+      "annualLimit":120000
+   },
+   {
+      "carrierName":"Assured",
+      "planName":"Assurance Two",
+      "copay":25,
+      "premium":200,
+      "annualLimit":250000
+   }
+]
+```
+
 For this example the id of the table will be named "plans". So far you should have something like this,
-	<table id="plans" class="generate-table" data-source="assets/json/healthplans.json">
+
+```html
+<table id="plans" class="generate-table" data-source="assets/json/healthplans.json">
+```
+
 Add the headers for the table need to be added as the first row of the table.
-	<thead>
-		<tr>
-			<td>carrierName</td>
-			<td>planName</td>
-			<td>copay</td>
-			<td>premium</td>
-			<td>annualLimit</td>
-		</tr>
-	</thead>
+
+```html
+<thead>
+	<tr>
+		<td>carrierName</td>
+		<td>planName</td>
+		<td>copay</td>
+		<td>premium</td>
+		<td>annualLimit</td>
+	</tr>
+</thead>
+```
 Then after the thead add a tbody tag. This is where the generated html will be added
-	<tbody></tbody>
+
+```html
+<tbody></tbody>
+```
 
 **Add custom sorting Drop Down**
 
 After creating your table add the class "table-sort" and the custom attribute data-table with the value of the id of your table in this case it is "plans",
-	<select class="table-sort" data-table="plans">
+
+```html
+<select class="table-sort" data-table="plans">
+```
 You are able to sort files your table alphabetically or by number value. The value of your option tags should also tbe the name of your table head.
+
+```html
+<option value="carrierName" selected>carrierName</option>
+<option value="planName">planName</option>
+<option value="copay">copay</option>
+<option value="premium">premium</option>
+<option value="annualLimit" data-sort="reverse">annualLimit</option>
+```
+When your finished you should something like,
+
+```html
+<select class="table-sort" data-table="plans">
 	<option value="carrierName" selected>carrierName</option>
 	<option value="planName">planName</option>
 	<option value="copay">copay</option>
 	<option value="premium">premium</option>
 	<option value="annualLimit" data-sort="reverse">annualLimit</option>
-When your finished you should something like,
-	<select class="table-sort" data-table="plans">
-		<option value="carrierName" selected>carrierName</option>
-		<option value="planName">planName</option>
-		<option value="copay">copay</option>
-		<option value="premium">premium</option>
-		<option value="annualLimit" data-sort="reverse">annualLimit</option>
-	</select>
+</select>
+```
