@@ -1,0 +1,72 @@
+/* Reset */
+html, body, div, table, tr, th, td, header, section {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+header,section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Page Style */
+* {
+	font-family: arial;
+}
+
+body {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+header {
+	margin-bottom: 15px;
+}
+
+header #logo {
+	font-size: 30px;
+	color: #18467d;
+	margin-top:10px;
+}
+
+select {
+	height: 30px;
+    padding: 5px;
+}
+
+#healthplans {
+	table-layout: fixed;
+}
+
+#healthplans thead {
+	color:white;
+	font-weight:bold;
+}
+
+#healthplans td {
+	overflow: hidden;
+	padding:10px;
+}
+
+#healthplans thead tr:first-child {
+	background-color: #F17309 !important;
+}
+
+#healthplans tr:nth-child(even) {
+    background-color: #ECF6F8;
+}
+
+#healthplans tr:nth-child(odd) {
+    background-color: #DAEDF3;
+}
