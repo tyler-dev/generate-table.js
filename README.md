@@ -66,7 +66,7 @@ The json file formatted by the name of the column as the key name and the value 
 For this example the id of the table will be named "plans". So far you should have something like this,
 
 ```html
-<table id="plans" class="generate-table" data-source="assets/json/healthplans.json">
+<table id="plans" class="generate-table" data-source="json/plans.json">
 ```
 
 Add the headers for the table need to be added as the first row of the table.
