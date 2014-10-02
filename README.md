@@ -18,7 +18,7 @@ generate-table
 And add this custom attribute. The value of this attribute is the location of the JSON file.
 
 ```
-data-source="json/plans.json"
+data-source="json/data.json"
 ```
 
 The json file formatted by the name of the column as the key name and the value being the text for the column. Here is some example data for the json,
