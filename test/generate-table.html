@@ -2,39 +2,39 @@
 <html>
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-		<title>Generate Table</title>
+		<title>GenerateTable.js</title>
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 		<script type="text/javascript" src="../src/generate-table.js"></script>
 		<script type="text/javascript">
 			$(document).ready(function() { //Dom Ready
-				$("#plans").generateTable(); //init
+				$("#data").generateTable(); //init
 			});
 		</script>
 	</head>
 	<body>
 		<header>
-			<div id="logo">Generate Table</div>
+			<div id="logo">Generate-Table.js</div>
 		</header>
 
 		<section>
 			<span><b>Sort By:&nbsp;</b></span>
-			<select class="table-sort" data-table="plans">
-				<option value="carrierName" selected>carrierName</option>
-				<option value="planName">planName</option>
-				<option value="copay">copay</option>
-				<option value="premium">premium</option>
-				<option value="annualLimit" data-sort="reverse">annualLimit</option>
+			<select class="table-sort" data-table="data">
+				<option value="name" selected>name</option>
+				<option value="description">description</option>
+				<option value="number1">number1</option>
+				<option value="number2">number2</option>
+				<option value="number3" data-sort="reverse">number3</option>
 			</select>
 			<br /><br/>
-			<table id="plans" class="generate-table" data-source="json/plans.json">
+			<table id="data" class="generate-table" data-source="json/data.json">
 				<thead>
 					<tr>
-						<td>carrierName</td>
-						<td>planName</td>
-						<td>copay</td>
-						<td>premium</td>
-						<td>annualLimit</td>
+						<td>name</td>
+						<td>description</td>
+						<td>number1</td>
+						<td>number2</td>
+						<td>number3</td>
 					</tr>
 				</thead>
 				<tbody></tbody>
