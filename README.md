@@ -1,5 +1,5 @@
-generate-table
-==============
+generate-table.js
+=================
 
 This jQuery plugin is used to generate html tables from a json datatype. Also includes sorting functionality.
 Its very basic and was created for a project I had to complete. All it does is read from a json file and sort it into an html table.
