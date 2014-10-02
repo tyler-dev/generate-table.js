@@ -26,39 +26,39 @@ The json file formatted by the name of the column as the key name and the value 
 ```json
 [
    {
-      "carrierName":"ProHealth",
-      "planName":"Be Well Basic",
-      "copay":40,
-      "premium":100,
-      "annualLimit":50000
+      "name":"Item 1",
+      "description":"Desc 1",
+      "number1":40,
+      "number2":100,
+      "number3":50000
    },
    {
-      "carrierName":"ProHealth",
-      "planName":"Be Well Extra",
-      "copay":30,
-      "premium":140,
-      "annualLimit":100000
+      "name":"Item 2",
+      "description":"Desc 2",
+      "number1":40,
+      "number2":100,
+      "number3":50000
    },
    {
-      "carrierName":"ProHealth",
-      "planName":"Be Well Max",
-      "copay":20,
-      "premium":180,
-      "annualLimit":200000
+      "name":"Item 3",
+      "description":"Desc 3",
+      "number1":40,
+      "number2":100,
+      "number3":50000
    },
    {
-      "carrierName":"Assured",
-      "planName":"Assurance One",
-      "copay":35,
-      "premium":135,
-      "annualLimit":120000
+      "name":"Item 4",
+      "description":"Desc 4",
+      "number1":40,
+      "number2":100,
+      "number3":50000
    },
    {
-      "carrierName":"Assured",
-      "planName":"Assurance Two",
-      "copay":25,
-      "premium":200,
-      "annualLimit":250000
+      "name":"Item 5",
+      "description":"Desc 5",
+      "number1":40,
+      "number2":100,
+      "number3":50000
    }
 ]
 ```
@@ -66,7 +66,7 @@ The json file formatted by the name of the column as the key name and the value 
 For this example the id of the table will be named "plans". So far you should have something like this,
 
 ```html
-<table id="plans" class="generate-table" data-source="json/plans.json">
+<table id="plans" class="generate-table" data-source="json/data.json">
 ```
 
 Add the headers for the table need to be added as the first row of the table.
@@ -74,11 +74,11 @@ Add the headers for the table need to be added as the first row of the table.
 ```html
 <thead>
 	<tr>
-		<td>carrierName</td>
-		<td>planName</td>
-		<td>copay</td>
-		<td>premium</td>
-		<td>annualLimit</td>
+		<td>name</td>
+		<td>description</td>
+		<td>number1</td>
+		<td>number2</td>
+		<td>number3</td>
 	</tr>
 </thead>
 ```
@@ -98,20 +98,26 @@ After creating your table add the class "table-sort" and the custom attribute da
 You are able to sort files your table alphabetically or by number value. The value of your option tags should also tbe the name of your table head.
 
 ```html
-<option value="carrierName" selected>carrierName</option>
-<option value="planName">planName</option>
-<option value="copay">copay</option>
-<option value="premium">premium</option>
-<option value="annualLimit" data-sort="reverse">annualLimit</option>
+<option value="name" selected>Namee</option>
+<option value="description">Description</option>
+<option value="number1">Number1</option>
+<option value="number2">Number2</option>
+<option value="number3">Number3</option>
 ```
 When your finished you should something like,
 
 ```html
 <select class="table-sort" data-table="plans">
-	<option value="carrierName" selected>carrierName</option>
-	<option value="planName">planName</option>
-	<option value="copay">copay</option>
-	<option value="premium">premium</option>
-	<option value="annualLimit" data-sort="reverse">annualLimit</option>
+	<option value="name" selected>Namee</option>
+	<option value="description">Description</option>
+	<option value="number1">Number1</option>
+	<option value="number2">Number2</option>
+	<option value="number3">Number3</option>
 </select>
+```
+
+Optional:
+You may add the following attribute to sort items in reverse (Ex: 3, 2, 1 or c, b ,a)
+```html
+	<coption value="number3" data-sort="reverse">Number3</option>
 ```
