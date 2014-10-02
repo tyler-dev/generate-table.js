@@ -66,7 +66,7 @@ The json file formatted by the name of the column as the key name and the value 
 For this example the id of the table will be named "plans". So far you should have something like this,
 
 ```html
-<table id="plans" class="generate-table" data-source="json/data.json">
+<table id="data" class="generate-table" data-source="json/data.json">
 ```
 
 Add the headers for the table need to be added as the first row of the table.
@@ -93,7 +93,7 @@ Then after the thead add a tbody tag. This is where the generated html will be a
 After creating your table add the class "table-sort" and the custom attribute data-table with the value of the id of your table in this case it is "plans",
 
 ```html
-<select class="table-sort" data-table="plans">
+<select class="table-sort" data-table="data">
 ```
 You are able to sort files your table alphabetically or by number value. The value of your option tags should also tbe the name of your table head.
 
@@ -107,7 +107,7 @@ You are able to sort files your table alphabetically or by number value. The val
 When your finished you should something like,
 
 ```html
-<select class="table-sort" data-table="plans">
+<select class="table-sort" data-table="data">
 	<option value="name" selected>Namee</option>
 	<option value="description">Description</option>
 	<option value="number1">Number1</option>
